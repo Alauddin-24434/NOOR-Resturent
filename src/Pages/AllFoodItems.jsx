@@ -19,17 +19,19 @@ const AllFoodItems = () => {
 
     return (
         <div>
-            <div className="my-6">
-                <form>
+            <div className="my-6 flex  bg-red-400">
+               
+               <form>
                     <input
                         type="text"
                         placeholder="Food Name Search here"
                         name="name"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)} // Step 4: Use onChange
-                        className="input input-bordered w-full max-w-xs"
+                        className="input input-bordered  w-96"
                     />
                 </form>
+              
             </div>
 
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
