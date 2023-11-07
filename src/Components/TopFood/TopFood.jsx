@@ -24,7 +24,7 @@ const TopFood = () => {
                         <p>{toopFood.FoodName}</p>
                         <p>{toopFood.Category}</p>
                         <p>{toopFood.Price}</p>
-                        <Link to={`/singleDetails/${toopFood._id}`} >   <button  className="btn btn-primary">Details</button></Link>
+                        <Link to={`/singleDetails/${toopFood._id}`} >   <button  className="btn rounded-none">Details</button></Link>
                     </div>
                 </div>)
             }

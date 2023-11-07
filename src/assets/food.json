@@ -1,353 +1,312 @@
 [
     {
-  
-    "FoodName": "Spaghetti Carbonara",
-    "Image": "https://i.ibb.co/CPkrR8b/classic-spaghetti-carbonara-sw-recipe.webp",
-    "Category": "Pasta",
-    "Price": 12.99,
-    "Quantity": 10,
-    "topFood": "top"
-    },
-    {
-  
-    "FoodName": "Pepperoni Pizza",
-    "Image": "https://i.ibb.co/47bPstw/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
-    "Category": "Pizza",
-    "Price": 15.49,
-    "Quantity": 75,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Caesar Salad",
-    "Image": "https://i.ibb.co/dMdNx9K/caesar-salad-in-bowl.webp",
-    "Category": "Salad",
-    "Price": 9.99,
-    "Quantity": 12,
-    "topFood": "top"
-    },
-    {
-
-    "FoodName": "Chicken Tikka Masala",
-    "Image": "https://i.ibb.co/G5s5jh6/tikka-masala-served-over-rice.jpg",
-    "Category": "Indian",
-    "Price": 14.99,
-    "Quantity": 80,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Sushi Combo",
-    "Image": "https://i.ibb.co/Np7jhRV/thumbnail.jpg",
-    "Category": "Japanese",
-    "Price": 22.99,
-    "Quantity": 60,
-    "topFood": "top"
-    },
-    {
-
-    "FoodName": "Hamburger",
-    "Image": "https://i.ibb.co/XzQVw8L/Burger-10.jpg",
-    "Category": "Burgers",
-    "Price": 10.99,
-    "Quantity": 11,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Mushroom Risotto",
-    "Image": "https://i.ibb.co/5FjPf9V/Mushroom-Risotto-new-cover-photo-5x4-1-of-1.jpg",
-    "Category": "Italian",
-    "Price": 13.99,
-    "Quantity": 90,
-    "topFood": "top"
-    },
-    {
-  
-    "FoodName": "Beef Tacos",
-    "Image": "https://i.ibb.co/QJRkKDc/Classic-Beef-Tacos-3.webp",
-    "Category": "Mexican",
-    "Price": 9.49,
-    "Quantity": 85,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Chocolate Cake",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Dessert",
-    "Price": 7.99,
-    "Quantity": 65,
-    "topFood": "top"
-    },
-    {
-
-    "FoodName": "Grilled Salmon",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Seafood",
-    "Price": 17.99,
-    "Quantity": 55,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Vegetable Stir-Fry",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Chinese",
-    "Price": 12.49,
-    "Quantity": 75,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Chicken Quesadilla",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Mexican",
-    "Price": 10.99,
-    "Quantity": 90,
-    "topFood": ""
-    },
-    {
-  
-    "FoodName": "Biryani",
-    "Image": "https://i.ibb.co/pXYTg0B/chicken-biryani.jpg",
-    "Category": "Bangladeshi",
-    "Price": 13.49,
-    "Quantity": 80,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Margherita Pizza",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Pizza",
-    "Price": 14.49,
-    "Quantity": 70,
-    "topFood": ""
-    },
-    {
-   
-    "FoodName": "Shrimp Scampi",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Seafood",
-    "Price": 18.99,
-    "Quantity": 60,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Crispy Fried Chicken",
-    "Image": "en.jpg",
-    "Category": "Chicken",
-    "Price": 11.99,
-    "Quantity": 85,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Lobster Bisque",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Soup",
-    "Price": 19.99,
-    "Quantity": 40,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Tiramisu",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Dessert",
-    "Price": 8.99,
-    "Quantity": 55,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Beef Stroganoff",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Russian",
-    "Price": 15.99,
-    "Quantity": 45,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Egg Fried Rice",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Chinese",
-    "Price": 8.49,
-    "Quantity": 95,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Taco Salad",
-    "Image": "  https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp   ",
-    "Category": "Mexican",
-    "Price": 12.49,
-    "Quantity": 65,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Sushi Sashimi Combo",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Japanese",
-    "Price": 26.99,
-    "Quantity": 35,
-    "topFood": ""
-    },
-    {
-  
-    "FoodName": "Chili Con Carne",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Mexican",
-    "Price": 9.99,
-    "Quantity": 70,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Shrimp Tacos",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Mexican",
-    "Price": 14.49,
-    "Quantity": 75,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Chicken Alfredo",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Pasta",
-    "Price": 13.99,
-    "Quantity": 80,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Sushi Roll Combo",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Japanese",
-    "Price": 20.99,
-    "Quantity": 50,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "BBQ Ribs",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Barbecue",
-    "Price": 16.99,
-    "Quantity": 65,
-    "topFood": ""
-    },
-    {
- 
-    "FoodName": "Greek Salad",
-    "Image": " https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp ",
-    "Category": "Salad",
-    "Price": 10.49,
-    "Quantity": 90,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Fish and Chips",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Seafood",
-    "Price": 11.99,
-    "Quantity": 70,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Mango Sorbet",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Dessert",
-    "Price": 5.99,
-    "Quantity": 75,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Penne alla Vodka",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Pasta",
-    "Price": 14.49,
-    "Quantity": 60,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Steak Fajitas",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Mexican",
-    "Price": 15.99,
-    "Quantity": 45,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Vegetarian Pizza",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Pizza",
-    "Price": 13.49,
-    "Quantity": 70,
-    "topFood": ""
-    },
-    {
-   
-    "FoodName": "Lemon Pepper Chicken",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Chicken",
-    "Price": 12.99,
-    "Quantity": 55,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Tomato Basil Soup",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webpg",
-    "Category": "Soup",
-    "Price": 8.99,
-    "Quantity": 85,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Pork Dumplings",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Chinese",
-    "Price": 9.49,
-    "Quantity": 65,
-    "topFood": ""
-    },
-    {
-
-    "FoodName": "Fettuccine Alfredo",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Italian",
-    "Price": 12.99,
-    "Quantity": 75,
-    "topFood": ""
-    },
-    {
-  
-    "FoodName": "Sesame Chicken",
-    "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Chinese",
-    "Price": 10.49,
-    "Quantity": 80,
-    "topFood": ""
-    },
-    {
-  
-    "FoodName": "Cheesecake",
-    "Image": " https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-    "Category": "Dessert",
-    "Price": 7.99,
-    "Quantity": 60,
-    "topFood": ""
+        "FoodName": "Shrimp Tacos",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Mexican",
+        "Price": 14.49,
+        "Quantity": 75,
+        "topFood": "",
+        "Count": 0
     }
-    ]
+    ,
+    {
+        "FoodName": "Margherita Pizza",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Pizza",
+        "Price": 14.49,
+        "Quantity": 70,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Mushroom Risotto",
+        "Image": "https://i.ibb.co/5FjPf9V/Mushroom-Risotto-new-cover-photo-5x4-1-of-1.jpg",
+        "Category": "Italian",
+        "Price": 13.99,
+        "Quantity": 90,
+        "topFood": "top",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Penne alla Vodka",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Pasta",
+        "Price": 14.49,
+        "Quantity": 60,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Fish and Chips",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Seafood",
+        "Price": 11.99,
+        "Quantity": 70,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Mango Sorbet",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Dessert",
+        "Price": 5.99,
+        "Quantity": 75,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Sesame Chicken",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Chinese",
+        "Price": 10.49,
+        "Quantity": 80,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Shrimp Scampi",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Seafood",
+        "Price": 18.99,
+        "Quantity": 60,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Beef Stroganoff",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Russian",
+        "Price": 15.99,
+        "Quantity": 45,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Sushi Roll Combo",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Japanese",
+        "Price": 20.99,
+        "Quantity": 50,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Vegetarian Pizza",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Pizza",
+        "Price": 13.49,
+        "Quantity": 70,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Pepperoni Pizza",
+        "Image": "https://i.ibb.co/47bPstw/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
+        "Category": "Pizza",
+        "Price": 15.49,
+        "Quantity": 75,
+        "topFood": "top",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Caesar Salad",
+        "Image": "https://i.ibb.co/dMdNx9K/caesar-salad-in-bowl.webp",
+        "Category": "Salad",
+        "Price": 9.99,
+        "Quantity": 12,
+        "topFood": "top",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Chicken Tikka Masala",
+        "Image": "https://i.ibb.co/G5s5jh6/tikka-masala-served-over-rice.jpg",
+        "Category": "Indian",
+        "Price": 14.99,
+        "Quantity": 80,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Beef Tacos",
+        "Image": "https://i.ibb.co/QJRkKDc/Classic-Beef-Tacos-3.webp",
+        "Category": "Mexican",
+        "Price": 9.49,
+        "Quantity": 85,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Chocolate Cake",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Dessert",
+        "Price": 7.99,
+        "Quantity": 65,
+        "topFood": "top",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "BBQ Ribs",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Barbecue",
+        "Price": 16.99,
+        "Quantity": 65,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Grilled Salmon",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Seafood",
+        "Price": 17.99,
+        "Quantity": 55,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Sushi Combo",
+        "Image": "https://i.ibb.co/Np7jhRV/thumbnail.jpg",
+        "Category": "Japanese",
+        "Price": 22.99,
+        "Quantity": 60,
+        "topFood": "top",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Vegetable Stir-Fry",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Chinese",
+        "Price": 12.49,
+        "Quantity": 75,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Crispy Fried Chicken",
+        "Image": "en.jpg",
+        "Category": "Chicken",
+        "Price": 11.99,
+        "Quantity": 85,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Chili Con Carne",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Mexican",
+        "Price": 9.99,
+        "Quantity": 70,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Chicken Alfredo",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Pasta",
+        "Price": 13.99,
+        "Quantity": 80,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Greek Salad",
+        "Image": " https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp ",
+        "Category": "Salad",
+        "Price": 10.49,
+        "Quantity": 90,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Tomato Basil Soup",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webpg",
+        "Category": "Soup",
+        "Price": 8.99,
+        "Quantity": 85,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Chicken Quesadilla",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Mexican",
+        "Price": 10.99,
+        "Quantity": 90,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Biryani",
+        "Image": "https://i.ibb.co/pXYTg0B/chicken-biryani.jpg",
+        "Category": "Bangladeshi",
+        "Price": 13.49,
+        "Quantity": 80,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Taco Salad",
+        "Image": "  https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp   ",
+        "Category": "Mexican",
+        "Price": 12.49,
+        "Quantity": 65,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Steak Fajitas",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Mexican",
+        "Price": 15.99,
+        "Quantity": 45,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Pork Dumplings",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Chinese",
+        "Price": 9.49,
+        "Quantity": 65,
+        "topFood": "",
+        "Count": 0
+    }
+    ,
+    {
+        "FoodName": "Fettuccine Alfredo",
+        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "Category": "Italian",
+        "Price": 12.99,
+        "Quantity": 75,
+        "topFood": "",
+        "Count": 0
+    }
+    
+]

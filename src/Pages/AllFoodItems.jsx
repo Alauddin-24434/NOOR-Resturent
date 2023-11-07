@@ -64,7 +64,7 @@ const AllFoodItems = () => {
 
             {dataFound ? (
                 <div>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredData?.slice(startIndex, endIndex).map((foods) => (
                             <div key={foods._id} className="card w-full rounded-none h-72 glass">
                                 <figure>
@@ -100,6 +100,7 @@ const AllFoodItems = () => {
                         <button
                             onClick={() => setCurrentPage(currentPage - 1)}
                             disabled={currentPage === 1}
+                          
                         >
                             Previous
                         </button>
@@ -107,7 +108,7 @@ const AllFoodItems = () => {
                             <button
                                 key={pageNumber}
                                 onClick={() => setCurrentPage(pageNumber)}
-                                className={currentPage === pageNumber ? "active" : ""}
+                                className={currentPage === pageNumber ? "text-red-400 font-semibold" : ""}
                             >
                                 {pageNumber}
                             </button>
