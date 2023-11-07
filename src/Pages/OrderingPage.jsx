@@ -8,10 +8,15 @@ const OrderingPage = () => {
   
     const load = useLoaderData();
 
-    const { FoodName, Price, Quantity } = load || {};
+    const { FoodName,Image, Price, Quantity } = load || {};
     const [productCount, setProductCount] = useState(1);
     const [totalPrice, setTotalPrice] = useState(Price); // Initialize newPrice with the default Price
-  
+    let todayDate= new Date();
+    let dd=String(todayDate.getDate()).padStart(2,'0');
+    let mm=String(todayDate.getMonth()+1).padStart(2,'0');
+    let yyyy=todayDate.getFullYear();
+    todayDate=mm+ '/' + dd + '/' + yyyy;
+    console.log(todayDate)
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -26,7 +31,16 @@ const OrderingPage = () => {
             return; // Exit the function and do not add the item
         }
 
-        const updatedBrand = { UserName:authUser?.displayName,UserEmail:authUser?.email,TotalPrice:Number(totalPrice.toFixed(2)), FoodName, Quantity: productCount };
+        const updatedBrand = {
+            Image,
+            UserName: authUser.displayName,
+            UserEmail: authUser.email,
+            TotalPrice: Number(totalPrice.toFixed(2)),
+            FoodName,
+            Quantity: productCount,
+            OrderDateTime: todayDate,
+        };
+        
         console.log(updatedBrand);
 
         // You can make an API request here to update the item on the server.

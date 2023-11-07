@@ -1,8 +1,86 @@
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 
 const OrderItem = () => {
+    const { authUser } = useContext(AuthContext)
+    const [cartUpadete, setCartUpdate] = useState([])
+    console.log(cartUpadete)
+
+    const now = new Date();
+    const currentHour = now.getHours();
+
+    let greeting;
+
+    if (currentHour >= 7 && currentHour < 12) {
+        greeting = 'Good morning';
+    } else if (currentHour >= 12 && currentHour < 18) {
+        greeting = 'Good afternoon';
+    } else if (currentHour >= 18 && currentHour < 22) {
+        greeting = 'Good evening';
+    } else {
+        greeting = 'Good night';
+    }
+
+    console.log(greeting);
+
+    const url = ` http://localhost:5000/carts?UserEmail=${authUser?.email}`
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setCartUpdate(data))
+    }, [url]);
+
     return (
-        <div>
-            
+        <div className="grid grid-cols-8">
+            <div className="col-span-2 bg-amber-500">
+                <ul role="list" className="space-y-5 p-4 my-7">
+
+                    <li className="flex space-x-3">
+                        <div className="avatar">
+                            <div className="w-12 rounded-xl">
+                                <img src={authUser?.photoURL} />
+                            </div>
+                        </div>
+                        <div>
+                            <p>{authUser?.displayName}</p>
+                            <p>{greeting}</p>
+                        </div>
+                    </li>
+                    <li className="flex space-x-3">
+
+                        <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Hi</span>
+                    </li>
+                    <li className="flex space-x-3">
+
+                        <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">mui </span>
+                    </li>
+
+
+
+                </ul>
+            </div>
+            <div className="col-span-4 bg-red-400 flex flex-col gap-y-4  items-center">
+                {
+                    cartUpadete?.map(order =>
+                        <div key={order._id} className="flex w-full h-32 flex-col items-center bg-green-600 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                            <img className="object-cover  rounded-t-lg h-32  w-28 md:rounded-none md:rounded-l-lg" src={order.Image} alt="" />
+                            <div className="cart cart-body">
+
+                                <div className="flex flex-row justify-center gap-12  items-center ">
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{order.FoodName}</h5>
+                                    <h2 className="float-right">{order.TotalPrice}</h2>
+                                </div>
+                                <div>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{order.OrderDateTime}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    )
+                }
+            </div>
+            <div className="col-span-2 bg-slate-400"></div>
         </div>
     );
 };
