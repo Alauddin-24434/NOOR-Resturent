@@ -12,12 +12,15 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddedItems from "../Components/Profile/AddedItems";
 import AddItem from "../Components/Profile/AddItem";
 import OrderItem from "../Components/Profile/OrderItem";
+import Menu from "../Layouts/UserDetails/Menu";
+import Error404 from "../Pages/Error404";
 
 
 const myRoute = createBrowserRouter([
     {
         path: '/',
         element: <MainLayOut></MainLayOut>,
+        errorElement:<Error404></Error404>,
         children: [
             {
                 path: '/',
@@ -45,7 +48,7 @@ const myRoute = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: 'addedItems',
+                path: '/addedItems',
                 element: <AddedItems></AddedItems>
             },
             {
@@ -54,7 +57,13 @@ const myRoute = createBrowserRouter([
             },
             {
                 path: 'orderItems',
-                element: <OrderItem/>
+                element: <OrderItem/>,
+                children:[
+                    {
+                        path:'orderItems',
+                        element:<Menu></Menu>
+                    }
+                ]
             },
             {
                 path: 'singleDetails/:id',

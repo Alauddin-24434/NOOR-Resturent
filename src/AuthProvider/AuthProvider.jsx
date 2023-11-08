@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
+import axios from "axios";
 
 
 
@@ -31,8 +33,20 @@ const AuthProvider = ({ children }) => {
     // onAuth state changed
     useEffect(() => {
         const unSubsCribe = onAuthStateChanged(auth, currentUser => {
-            console.log(currentUser)
             setAuthUser(currentUser);
+            const userEmail=currentUser?.email || authUser?.email;
+            const loggedUser={email:userEmail}
+          
+            // console.log('logged user', loggedUser);
+            // console.log('current user', currentUser);
+           
+            if(currentUser){
+                axios.post('http://localhost:5000/jwt', loggedUser ,{withCredentials:true})
+                .then(res=>{
+                    console.log("token response",res.data)
+                })
+            }
+            setLoading(false)
         })
        return()=>{
         unSubsCribe;
