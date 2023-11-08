@@ -75,7 +75,7 @@ const AllFoodItems = () => {
                                     />
                                 </figure>
                                 <div className="card-body p-1">
-                                    <div className="flex justify-between bg-red-400">
+                                    <div className="flex justify-between ">
                                         <p className="card-title ">{foods.foodName}</p>
                                         <p>{foods.price}</p>
                                     </div>
