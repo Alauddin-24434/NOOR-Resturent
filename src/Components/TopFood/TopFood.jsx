@@ -14,7 +14,8 @@ const TopFood = () => {
 
     }, [url])
     return (
-     <div className="max-w-[6xl] mx-auto ">
+     <div className="max-w-[6xl] mx-auto my-8">
+        <h1 className="text-5xl font-semi-bold mb-8  text-orange-600" >Top Foods</h1>
            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {
                 topFoodItem?.map(toopFood => <div
