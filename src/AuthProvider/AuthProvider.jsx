@@ -2,7 +2,6 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/Firebase.config";
-import axios from "axios";
 
 
 
@@ -34,23 +33,23 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unSubsCribe = onAuthStateChanged(auth, currentUser => {
             setAuthUser(currentUser);
-            const userEmail=currentUser?.email || authUser?.email;
-            const loggedUser={email:userEmail}
+            // const email=currentUser?.email || authUser?.email;
+            // const loggedUser={email:email}
           
-            // console.log('logged user', loggedUser);
-            // console.log('current user', currentUser);
+            // // console.log('logged user', loggedUser);
+            // // console.log('current user', currentUser);
            
-            if(currentUser){
-                axios.post('http://localhost:5000/jwt', loggedUser ,{withCredentials:true})
-                .then(res=>{
-                    console.log("token response",res.data)
-                })
-            }
-            setLoading(false)
+            // if(currentUser){
+            //     axios.post(' http://localhost:5000/jwt', loggedUser ,{withCredentials:true})
+            //     .then(res=>{
+            //         console.log("token response",res.data)
+            //     })
+            // }
+           
         })
        return()=>{
         unSubsCribe;
-        setLoading
+        setLoading(false)
        }
 
     }, [])

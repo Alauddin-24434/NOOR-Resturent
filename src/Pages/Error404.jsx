@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Error404 = () => {
   return (
-    <div className="hero h-screen bg-base-200 object-cover p-4" style={{ backgroundImage: 'url(/src/assets/inage/404.png)' }}>
+    <div className="hero h-screen bg-base-200 object-cover p-4" style={{ backgroundImage: 'url(image/404.png)' }}>
       
         <div className="w-full relative h-full ">
         

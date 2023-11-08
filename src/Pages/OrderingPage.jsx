@@ -41,12 +41,12 @@ const OrderingPage = () => {
             OrderDateTime: todayDate,
         };
         
-        console.log(orderingFoods);
+        // console.log(orderingFoods);
 
         // You can make an API request here to update the item on the server.
         // For now, it's commented out.
 
-        fetch('http://localhost:5000/orderingPage', {
+        fetch(' http://localhost:5000/orderingPage', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

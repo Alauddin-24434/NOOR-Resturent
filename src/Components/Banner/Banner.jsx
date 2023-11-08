@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
     return (
         <div>
-            <div className="hero h-full md:h-[500px] bg-base-200 object-cover" style={{backgroundImage: 'url(/src/assets/inage/banner1.jpg)'}}>
+            <div className="hero h-full md:h-[500px] bg-base-200 object-cover" style={{backgroundImage: 'url(image/banner1.jpg)'}}>
                 <div className="hero-content grid grid-cols-4">
                   
                     <div className="col-span-2">

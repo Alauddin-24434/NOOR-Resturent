@@ -9,12 +9,16 @@ const Home = () => {
 
 
     return (
-        <div className="bg-slate-300">
+        <div className="">
             <Banner></Banner>
             {/* top food collection store import hare  */}
             <TopFood></TopFood>
+           
+            <div className="bg-zinc-400">
             <Slideshow></Slideshow>
             <ContactUs></ContactUs>
+            </div>
+            
         </div>
     );
 };

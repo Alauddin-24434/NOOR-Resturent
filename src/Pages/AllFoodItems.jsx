@@ -20,7 +20,7 @@ const AllFoodItems = () => {
     // Handle search when the "Enter" key is pressed
     const handleSearch = () => {
         // Update the dataFound state based on whether there are matching results
-        setDataFound(filteredData.length > 0);
+        setDataFound(filteredData?.length > 0);
     }
 
     // Calculate the indexes for the current page
@@ -32,7 +32,7 @@ const AllFoodItems = () => {
     }
 
     // Calculate the total number of pages
-    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredData?.length / itemsPerPage);
 
     // Create an array of page numbers
     const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);

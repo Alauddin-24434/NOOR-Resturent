@@ -7,7 +7,7 @@ const useUserAddedFoods = () => {
     const {data,isLoading ,isFetching}=useQuery({
         queryKey:['addedUser'],
         queryFn: async ()=> {
-            const data= await fetch(`http://localhost:5000/addedUser?email=${authUser?.email}`)
+            const data= await fetch(` http://localhost:5000/addedUser?email=${authUser?.email}`)
             return await data.json()
         }
         

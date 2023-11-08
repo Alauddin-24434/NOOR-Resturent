@@ -5,7 +5,7 @@ const TopFood = () => {
     const [topFoodItem, setTopFoodItem] = useState([])
     console.log(topFoodItem)
 
-    const url = `http://localhost:5000/topFood?topFood=top`
+    const url = ` http://localhost:5000/topFood?topFood=top`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

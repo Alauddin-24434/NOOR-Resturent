@@ -41,7 +41,7 @@ const AddedItems = () => {
    
     
 
-    const url = `http://localhost:5000/addedUser?email=${authUser?.email}`
+    const url = ` http://localhost:5000/addedUser?email=${authUser?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

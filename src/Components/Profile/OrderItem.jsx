@@ -28,7 +28,7 @@ const OrderItem = () => {
 
     // console.log(greeting);
 
-    const url = `http://localhost:5000/carts?UserEmail=${authUser?.email}`
+    const url = ` http://localhost:5000/carts?UserEmail=${authUser?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

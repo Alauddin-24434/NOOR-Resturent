@@ -8,11 +8,11 @@ const ContactUs = () => {
 
     return (
         <div className="contact-us-container">
-            <h2>Contact Us</h2>
+          
 
-           <div className='flex flex-col md:flex-row'>
-           <div className="contact-image">
-                <img src="/src/assets/inage/banner1.jpg" alt="Contact" />
+           <div className='flex flex-col md:flex-row items-center justify-center'>
+           <div className="contact-image w-1/2">
+                <img src="image/contact.jpg" alt="Contact" />
             </div>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">

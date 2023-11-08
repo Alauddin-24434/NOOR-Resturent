@@ -30,9 +30,9 @@ const AddItem = () => {
             shortDescription,
            quantityAvailable:Number(quantityAvailable)
         };
-        console.log(addFoodUser)
+        // console.log(addFoodUser)
 
-        fetch('  http://localhost:5000/users', {
+        fetch('   http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
