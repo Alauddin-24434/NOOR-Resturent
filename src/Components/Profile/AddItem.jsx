@@ -8,27 +8,27 @@ const AddItem = () => {
     const handleSubmit = event => {
         event.preventDefault();
         const form = event.target;
-        const FoodName = form.FoodName.value;
-        const Image = form.Image.value;
-        const Price = form.Price.value;
-        const Category = form.Category.value;
-        const Quantity = form.Quantity.value;
-        const Origin = form.Origin.value;
+        const foodName = form.FoodName.value;
+        const foodImage = form.Image.value;
+        const price = form.Price.value;
+        const category = form.Category.value;
+        const quantityAvailable = form.Quantity.value;
+        const foodOrigin = form.Origin.value;
 
-        const ShortDescription = form.ShortDescription.value;
+        const shortDescription = form.ShortDescription.value;
 
 
 
         const addFoodUser = {
-            MadeUserName: authUser?.displayName,
-            UserEmail: authUser?.email,
-            FoodName,
-            Category,
-            Image,
-            Price,
-            Origin,
-            ShortDescription,
-            Quantity:Number(Quantity)
+            userName: authUser?.displayName,
+            email: authUser?.email,
+            foodName,
+            category,
+            foodImage,
+            price,
+            foodOrigin,
+            shortDescription,
+           quantityAvailable:Number(quantityAvailable)
         };
         console.log(addFoodUser)
 

@@ -18,14 +18,14 @@ const TopFood = () => {
         <h1 className="text-5xl font-semi-bold mb-8  text-orange-600" >Top Foods</h1>
            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {
-                topFoodItem?.map(toopFood => <div
-                    className="h-96 w-full border" key={toopFood._id}>
-                    <img className="object-cover  w-full h-64" src={toopFood.Image} alt="" />
+                topFoodItem?.map(topFood => <div
+                    className="h-96 w-full border" key={topFood._id}>
+                    <img className="object-cover  w-full h-64" src={topFood.foodImage} alt="" />
                     <div>
-                        <p>{toopFood.FoodName}</p>
-                        <p>{toopFood.Category}</p>
-                        <p>{toopFood.Price}</p>
-                        <Link to={`/singleDetails/${toopFood._id}`} >   <button  className="btn rounded-none">Details</button></Link>
+                        <p>{topFood.foodName}</p>
+                        <p>{topFood.category}</p>
+                        <p>{topFood.price}</p>
+                        <Link to={`/singleDetails/${topFood._id}`} >   <button  className="btn rounded-none">Details</button></Link>
                     </div>
                 </div>)
             }

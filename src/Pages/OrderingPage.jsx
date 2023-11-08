@@ -8,9 +8,9 @@ const OrderingPage = () => {
   
     const load = useLoaderData();
 
-    const { FoodName,Image, Price, Quantity } = load || {};
+    const { foodName,foodImage, price, quantityAvailable } = load || {};
     const [productCount, setProductCount] = useState(1);
-    const [totalPrice, setTotalPrice] = useState(Price); // Initialize newPrice with the default Price
+    const [totalPrice, setTotalPrice] = useState(price); // Initialize newPrice with the default Price
     let todayDate= new Date();
     let dd=String(todayDate.getDate()).padStart(2,'0');
     let mm=String(todayDate.getMonth()+1).padStart(2,'0');
@@ -20,7 +20,7 @@ const OrderingPage = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (productCount > Quantity) {
+        if (productCount > quantityAvailable) {
             Swal.fire({
                 title: 'Error!',
                 text: 'Not Available food item.',
@@ -31,17 +31,17 @@ const OrderingPage = () => {
             return; // Exit the function and do not add the item
         }
 
-        const updatedBrand = {
-            Image,
-            UserName: authUser.displayName,
-            UserEmail: authUser.email,
-            TotalPrice: Number(totalPrice.toFixed(2)),
-            FoodName,
-            Quantity: productCount,
+        const orderingFoods = {
+            foodImage,
+            userName: authUser?.displayName,
+            email: authUser?.email,
+            totalPrice: Number(totalPrice.toFixed(2)),
+            foodName,
+            productCount,
             OrderDateTime: todayDate,
         };
         
-        console.log(updatedBrand);
+        console.log(orderingFoods);
 
         // You can make an API request here to update the item on the server.
         // For now, it's commented out.
@@ -52,7 +52,7 @@ const OrderingPage = () => {
                 'content-type': 'application/json'
 
             },
-            body: JSON.stringify(updatedBrand),
+            body: JSON.stringify(orderingFoods),
         })
             .then((res) => res.json())
             .then((data) => {
@@ -71,7 +71,7 @@ const OrderingPage = () => {
     // Function to handle quantity change and update the price
     const handleFoodPriceChange = (updateCountQuantity) => {
         setProductCount(updateCountQuantity);
-        setTotalPrice(Price * updateCountQuantity); // Recalculate the new price
+        setTotalPrice(price * updateCountQuantity); // Recalculate the new price
     };
 
     return (
@@ -81,7 +81,7 @@ const OrderingPage = () => {
 {
     authUser && 
     <div className="w-full max-w-sm p-4 bg-red-300 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">{FoodName}</h5>
+        <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">{foodName}</h5>
 
 
         <ul role="list" className="space-y-5 my-7">
@@ -91,7 +91,7 @@ const OrderingPage = () => {
             </li>
             <li className="flex space-x-3">
 
-                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Available Quantity: {Quantity}</span>
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Available Quantity: {quantityAvailable}</span>
             </li>
             <li className="flex space-x-3">
 

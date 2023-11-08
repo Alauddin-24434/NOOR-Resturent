@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const AddedItems = () => {
-    const {authUser, loader,}=useContext(AuthContext)
+    const {authUser, }=useContext(AuthContext)
     const [data, setTopFoodItem] = useState([])
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
@@ -17,7 +17,7 @@ const AddedItems = () => {
 
     // // Step 3: Filter the data based on the search query
     const filteredData = data?.filter((food) =>
-        food.FoodName.toLowerCase().includes(searchQuery.toLowerCase())
+        food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // // Handle search when the "Enter" key is pressed
@@ -41,7 +41,7 @@ const AddedItems = () => {
    
     
 
-    const url = `http://localhost:5000/addedUser?MadeUserEmail=${authUser?.email}`
+    const url = `http://localhost:5000/addedUser?email=${authUser?.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -83,20 +83,20 @@ const AddedItems = () => {
                                 <figure>
                                     <img
                                         className="w-full object-cover h-48"
-                                        src={foods.Image}
+                                        src={foods.foodImage}
                                         alt="car!"
                                     />
                                 </figure>
                                 <div className="card-body p-1">
                                     <div className="flex justify-between bg-red-400">
                                         <p className="card-title ">{foods.FoodName}</p>
-                                        <p>{foods.Price}</p>
+                                        <p>{foods.price}</p>
                                     </div>
                                     <div>
-                                        <p>{foods.Category}</p>
+                                        <p>{foods.category}</p>
                                     </div>
                                     <div className="flex justify-between">
-                                        <p>Stock: {foods.Quantity}</p>
+                                        <p>Stock: {foods.quantityAvailable}</p>
                                         <Link to={`/singleDetails/${foods._id}`}>
                                             <button className="btn rounded-none">
                                                 Details <AiOutlineArrowRight />

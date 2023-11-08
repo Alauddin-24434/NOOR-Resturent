@@ -5,7 +5,6 @@ import { MdOutlinePayments } from 'react-icons/md';
 import { LuPhoneCall } from 'react-icons/lu';
 import { RiMenuAddFill } from 'react-icons/ri';
 import { Link } from "react-router-dom";
-import Menu from "../../Layouts/UserDetails/Menu";
 
 const OrderItem = () => {
     const { authUser } = useContext(AuthContext)
@@ -81,19 +80,17 @@ const OrderItem = () => {
 
                 </ul>
             </div>
-            <div className="col-span-4 bg-red-400 flex flex-col gap-y-4  items-center">
-             <Menu></Menu>
-            </div>
-            <div className="col-span-2 bg-slate-400">
+           
+            <div className="col-span-6 flex flex-col gap-6 bg-slate-400 p-6">
             {
                     cartUpadete?.map(order =>
-                        <div key={order._id} className="flex w-full h-32 flex-col items-center bg-green-600 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img className="object-cover  rounded-t-lg h-32  w-28 md:rounded-none md:rounded-l-lg" src={order.Image} alt="" />
+                        <div key={order._id} className="flex w-4xl h-32 flex-col items-center   border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                            <img className="object-cover  rounded-t-lg h-32  w-28 md:rounded-none md:rounded-l-lg" src={order.foodImage} alt="" />
                             <div className="cart cart-body">
 
                                 <div className="flex flex-row justify-center gap-12  items-center ">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{order.FoodName}</h5>
-                                    <h2 className="float-right">{order.TotalPrice}</h2>
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{order.foodName}</h5>
+                                    <h2 className="float-right">{order.totalPrice}</h2>
                                 </div>
                                 <div>
                                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{order.OrderDateTime}</p>
