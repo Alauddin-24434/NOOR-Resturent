@@ -1,312 +1,249 @@
 [
     {
-        "FoodName": "Shrimp Tacos",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Mexican",
-        "Price": 14.49,
-        "Quantity": 75,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Margherita Pizza",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Pizza",
-        "Price": 14.49,
-        "Quantity": 70,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Mushroom Risotto",
-        "Image": "https://i.ibb.co/5FjPf9V/Mushroom-Risotto-new-cover-photo-5x4-1-of-1.jpg",
-        "Category": "Italian",
-        "Price": 13.99,
-        "Quantity": 90,
+        "foodName": "Sesame Chicken",
+        "foodImage": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "category": "Chinese",
+        "price": 10.49,
+        "quantityAvailable": 7,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
         "topFood": "top",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Penne alla Vodka",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Pasta",
-        "Price": 14.49,
-        "Quantity": 60,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Fish and Chips",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Seafood",
-        "Price": 11.99,
-        "Quantity": 70,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Mango Sorbet",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Dessert",
-        "Price": 5.99,
-        "Quantity": 75,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Sesame Chicken",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Chinese",
-        "Price": 10.49,
-        "Quantity": 80,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Shrimp Scampi",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Seafood",
-        "Price": 18.99,
-        "Quantity": 60,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Beef Stroganoff",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Russian",
-        "Price": 15.99,
-        "Quantity": 45,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Sushi Roll Combo",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Japanese",
-        "Price": 20.99,
-        "Quantity": 50,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Vegetarian Pizza",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Pizza",
-        "Price": 13.49,
-        "Quantity": 70,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Pepperoni Pizza",
-        "Image": "https://i.ibb.co/47bPstw/picking-slice-of-pepperoni-pizza-picture-id1133727757.jpg",
-        "Category": "Pizza",
-        "Price": 15.49,
-        "Quantity": 75,
+        "foodOrigin": "China"
+        
+      }
+      ,
+      {
+        "foodName": "Beef Tacos",
+        "foodImage": "https://i.ibb.co/QJRkKDc/Classic-Beef-Tacos-3.webp",
+        "category": "Mexican",
+        "price": 9.49,
+        "quantityAvailable": 12,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": "Mexico"
+      }
+      ,
+      {
+        "foodName": "Chocolate Cake",
+        "foodImage": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "category": "Dessert",
+        "price": 7.99,
+        "quantityAvailable": 9,
+        "madeByName": "Alauddin",
         "topFood": "top",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Caesar Salad",
-        "Image": "https://i.ibb.co/dMdNx9K/caesar-salad-in-bowl.webp",
-        "Category": "Salad",
-        "Price": 9.99,
-        "Quantity": 12,
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": "Bangladesh"
+      }
+      ,
+      {
+        "foodName": "Fish and Chips",
+        "foodImage": "https://i.ibb.co/ZWLkR7n/1.jpg",
+        "category": "Seafood",
+        "price": 11.99,
+        "quantityAvailable": 5,
+        "madeByName": "Alauddin",
         "topFood": "top",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Chicken Tikka Masala",
-        "Image": "https://i.ibb.co/G5s5jh6/tikka-masala-served-over-rice.jpg",
-        "Category": "Indian",
-        "Price": 14.99,
-        "Quantity": 80,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Beef Tacos",
-        "Image": "https://i.ibb.co/QJRkKDc/Classic-Beef-Tacos-3.webp",
-        "Category": "Mexican",
-        "Price": 9.49,
-        "Quantity": 85,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Chocolate Cake",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Dessert",
-        "Price": 7.99,
-        "Quantity": 65,
+        "shortDescription": "Cod, malt vinegar, self raising flour, capers, maris piper potatoes ",
+        "foodOrigin": "Bangladesh"
+      }
+      ,
+      {
+        "foodName": "Margherita Pizza",
+        "foodImage": "https://i.ibb.co/TRr9tHy/download-1.jpg",
+        "category": "Pizza",
+        "price": 14.49,
+        "quantityAvailable": 14,
+        "madeByName": "Alauddin",
         "topFood": "top",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "BBQ Ribs",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Barbecue",
-        "Price": 16.99,
-        "Quantity": 65,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Grilled Salmon",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Seafood",
-        "Price": 17.99,
-        "Quantity": 55,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Sushi Combo",
-        "Image": "https://i.ibb.co/Np7jhRV/thumbnail.jpg",
-        "Category": "Japanese",
-        "Price": 22.99,
-        "Quantity": 60,
+        "shortDescription": "This margherita pizza recipe tastes like an artisan pie from Italy! It's the perfect meld of zingy  ",
+        "foodOrigin": "Bangladesh"
+      }
+      ,
+      {
+        "foodName": "Steak Fajitas",
+        "foodImage": "https://i.ibb.co/jVPpZ3c/download-2.jpg",
+        "category": "Mexican",
+        "price": 15.99,
+        "quantityAvailable": 2,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent "
+      }
+      ,
+      {
+        "foodName": "Vegetarian Pizza",
+        "foodImage": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
+        "category": "Pizza",
+        "price": 13.49,
+        "quantityAvailable": 10,
+        "madeByName": "Alauddin",
+        "shortDescription": "This sizzling steak fajitas recipe (with the best marinade) always hits the spot for an easy, ",
+        "foodOrigin": "Bangladesh"
+      }
+      ,
+      {
+        "foodName": "Pepperoni Pizza",
+        "foodImage": "https://i.ibb.co/Zmw35bW/picking-slice-of-pepperoni-pizza-picture-id1133727757-1.jpg",
+        "category": "Pizza",
+        "price": 15.49,
+        "quantityAvailable": 13,
         "topFood": "top",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Vegetable Stir-Fry",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Chinese",
-        "Price": 12.49,
-        "Quantity": 75,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Crispy Fried Chicken",
-        "Image": "en.jpg",
-        "Category": "Chicken",
-        "Price": 11.99,
-        "Quantity": 85,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Chili Con Carne",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Mexican",
-        "Price": 9.99,
-        "Quantity": 70,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Chicken Alfredo",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Pasta",
-        "Price": 13.99,
-        "Quantity": 80,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Greek Salad",
-        "Image": " https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp ",
-        "Category": "Salad",
-        "Price": 10.49,
-        "Quantity": 90,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Tomato Basil Soup",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webpg",
-        "Category": "Soup",
-        "Price": 8.99,
-        "Quantity": 85,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Chicken Quesadilla",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Mexican",
-        "Price": 10.99,
-        "Quantity": 90,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Biryani",
-        "Image": "https://i.ibb.co/pXYTg0B/chicken-biryani.jpg",
-        "Category": "Bangladeshi",
-        "Price": 13.49,
-        "Quantity": 80,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Taco Salad",
-        "Image": "  https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp   ",
-        "Category": "Mexican",
-        "Price": 12.49,
-        "Quantity": 65,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Steak Fajitas",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Mexican",
-        "Price": 15.99,
-        "Quantity": 45,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Pork Dumplings",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Chinese",
-        "Price": 9.49,
-        "Quantity": 65,
-        "topFood": "",
-        "Count": 0
-    }
-    ,
-    {
-        "FoodName": "Fettuccine Alfredo",
-        "Image": "https://i.ibb.co/Q64BSSh/chocolate-cake-easy-vegan-recipe-one-bowl-best.webp",
-        "Category": "Italian",
-        "Price": 12.99,
-        "Quantity": 75,
-        "topFood": "",
-        "Count": 0
-    }
-    
+        "madeByName": "Alauddin",
+        "shortDescription": "Popular at parties, pepperoni pizza is always a crowd-pleaser. Make this easy homemade pizza with  ",
+        "foodOrigin": "Bangladesh"
+      }
+      ,
+      {
+        "foodName": "BBQ Ribs",
+        "foodImage": "https://i.ibb.co/JsH93ps/Sticky-BBQ-ribs-3.jpg",
+        "category": "Barbecue",
+        "price": 16.99,
+        "quantityAvailable": 9,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Chili Con Carne",
+        "foodImage": "https://i.ibb.co/HnC2Q6T/46258212.webp",
+        "category": "Mexican",
+        "price": 9.99,
+        "quantityAvailable": 7,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Mushroom Risotto",
+        "foodImage": "https://i.ibb.co/5FjPf9V/Mushroom-Risotto-new-cover-photo-5x4-1-of-1.jpg",
+        "category": "Italian",
+        "price": 13.99,
+        "quantityAvailable": 6,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Pork Dumplings",
+        "foodImage": "https://i.ibb.co/RDfLttT/bhg-pork-and-shitake-steamed-dumplings-Fm-Og5-5-J4gv94-Ccc-QYTVph-0ef0a4a8987244759154f9e5e1b1819e.jpg",
+        "category": "Chinese",
+        "price": 9.49,
+        "quantityAvailable": 2,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": "China"
+      }
+      ,
+      {
+        "foodName": "Chicken Tikka Masala",
+        "foodImage": "https://i.ibb.co/G5s5jh6/tikka-masala-served-over-rice.jpg",
+        "category": "Indian",
+        "price": 14.99,
+        "quantityAvailable": 9,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Fettuccine Alfredo",
+        "foodImage": "https://i.ibb.co/3hmH0q8/Fettuccine-Alfredo-1.jpg",
+        "category": "Italian",
+        "price": 12.99,
+        "quantityAvailable": 15,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Tomato Basil Soup",
+        "foodImage": "https://i.ibb.co/mBJtH6d/tomato-basil-soup.jpg",
+        "category": "Soup",
+        "price": 8.99,
+        "quantityAvailable": 10,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Taco Salad",
+        "foodImage": "https://i.ibb.co/8jHt6tJ/Taco-Salad.jpg   ",
+        "category": "Mexican",
+        "price": 12.49,
+        "quantityAvailable": 12,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Sushi Combo",
+        "foodImage": "https://i.ibb.co/Np7jhRV/thumbnail.jpg",
+        "category": "Japanese",
+        "topFood": "top",
+        "price": 22.99,
+        "quantityAvailable": 6,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Crispy Fried Chicken",
+        "foodImage": "https://i.ibb.co/ykn4bdH/Fried-Chicken-Tenders.jpg",
+        "category": "Chicken",
+        "price": 11.99,
+        "quantityAvailable": 4,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Caesar Salad",
+        "foodImage": "https://i.ibb.co/dMdNx9K/caesar-salad-in-bowl.webp",
+        "category": "Salad",
+        "price": 9.99,
+        "quantityAvailable": 8,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Mango Sorbet",
+        "foodImage": "https://i.ibb.co/gjhTMmG/Mango-Sorbet-010.webp",
+        "category": "Dessert",
+        "price": 5.99,
+        "quantityAvailable": 75,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Penne alla Vodka",
+        "foodImage": "https://i.ibb.co/br6x70w/penne-alla-vodka-5.webp",
+        "category": "Pasta",
+        "price": 14.49,
+        "quantityAvailable": 5,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
+      ,
+      {
+        "foodName": "Shrimp Tacos",
+        "foodImage": "https://i.ibb.co/PtxSTsv/download-3.jpg",
+        "category": "Mexican",
+        "price": 14.49,
+        "quantityAvailable": 13,
+        "madeByName": "Alauddin",
+        "shortDescription": "Its awosome and more delicous food our resturent ",
+        "foodOrigin": ""
+      }
 ]

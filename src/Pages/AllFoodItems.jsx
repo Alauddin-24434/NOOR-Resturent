@@ -14,7 +14,7 @@ const AllFoodItems = () => {
 
     // Step 3: Filter the data based on the search query
     const filteredData = data?.filter((food) =>
-        food.FoodName.toLowerCase().includes(searchQuery.toLowerCase())
+        food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Handle search when the "Enter" key is pressed
@@ -70,20 +70,20 @@ const AllFoodItems = () => {
                                 <figure>
                                     <img
                                         className="w-full object-cover h-48"
-                                        src={foods.Image}
+                                        src={foods.foodImage}
                                         alt="car!"
                                     />
                                 </figure>
                                 <div className="card-body p-1">
                                     <div className="flex justify-between bg-red-400">
-                                        <p className="card-title ">{foods.FoodName}</p>
-                                        <p>{foods.Price}</p>
+                                        <p className="card-title ">{foods.foodName}</p>
+                                        <p>{foods.price}</p>
                                     </div>
                                     <div>
-                                        <p>{foods.Category}</p>
+                                        <p>{foods.category}</p>
                                     </div>
                                     <div className="flex justify-between">
-                                        <p>Stock: {foods.Quantity}</p>
+                                        <p>Stock: {foods.quantityAvailable}</p>
                                         <Link to={`/singleDetails/${foods._id}`}>
                                             <button className="btn rounded-none">
                                                 Details <AiOutlineArrowRight />

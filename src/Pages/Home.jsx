@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner/Banner";
+import ContactUs from "../Components/Contact/ContactUs";
 import Slideshow from "../Components/Slideshow/Slideshow";
 
 import TopFood from "../Components/TopFood/TopFood";
@@ -9,11 +10,11 @@ const Home = () => {
 
     return (
         <div className="bg-slate-300">
-           <Banner></Banner>
+            <Banner></Banner>
             {/* top food collection store import hare  */}
             <TopFood></TopFood>
             <Slideshow></Slideshow>
-
+            <ContactUs></ContactUs>
         </div>
     );
 };
