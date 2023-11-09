@@ -97,9 +97,9 @@ const AddedItems = () => {
                                     </div>
                                     <div className="flex justify-between">
                                         <p>Stock: {foods.quantityAvailable}</p>
-                                        <Link to={`/singleDetails/${foods._id}`}>
+                                        <Link to={`/updateRoute/${foods._id}`}>
                                             <button className="btn rounded-none">
-                                                Details <AiOutlineArrowRight />
+                                                Update <AiOutlineArrowRight />
                                             </button>
                                         </Link>
                                     </div>

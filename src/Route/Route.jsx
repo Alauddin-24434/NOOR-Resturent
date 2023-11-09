@@ -14,6 +14,7 @@ import AddItem from "../Components/Profile/AddItem";
 import OrderItem from "../Components/Profile/OrderItem";
 
 import Error404 from "../Pages/Error404";
+import UpdateRoute from "../Components/Profile/UpdateRoute";
 
 
 const myRoute = createBrowserRouter([
@@ -70,6 +71,11 @@ const myRoute = createBrowserRouter([
                 path: '/orderingPage/:id',
                 element: <OrderingPage></OrderingPage>,
                 loader: ({ params }) => fetch(` http://localhost:5000/singleDetails/${params.id}`)
+            },
+            {
+                path: '/updateRoute/:id',
+                element:<UpdateRoute></UpdateRoute>,
+                loader:({params})=> fetch(`http://localhost:5000/userUpdate/${params.id}`)
             }
 
         ]

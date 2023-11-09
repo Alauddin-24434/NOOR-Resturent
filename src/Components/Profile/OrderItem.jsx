@@ -81,7 +81,7 @@ const OrderItem = () => {
                 </ul>
             </div>
            
-            <div className="col-span-6 flex flex-col gap-6 bg-slate-400 p-6">
+            <div className="col-span-6 flex flex-col gap-6 p-6">
             {
                     cartUpadete?.map(order =>
                         <div key={order._id} className="flex w-4xl h-32 flex-col items-center   border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">

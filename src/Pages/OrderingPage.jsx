@@ -5,18 +5,18 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const OrderingPage = () => {
     const { authUser } = useContext(AuthContext)
-  
+
     const load = useLoaderData();
 
-    const { foodName,foodImage, price, quantityAvailable } = load || {};
+    const { foodName, foodImage, price, quantityAvailable } = load || {};
     const [productCount, setProductCount] = useState(1);
     const [totalPrice, setTotalPrice] = useState(price); // Initialize newPrice with the default Price
-    let todayDate= new Date();
-    let dd=String(todayDate.getDate()).padStart(2,'0');
-    let mm=String(todayDate.getMonth()+1).padStart(2,'0');
-    let yyyy=todayDate.getFullYear();
-    todayDate=mm+ '/' + dd + '/' + yyyy;
-    console.log(todayDate)
+    let todayDate = new Date();
+    let dd = String(todayDate.getDate()).padStart(2, '0');
+    let mm = String(todayDate.getMonth() + 1).padStart(2, '0');
+    let yyyy = todayDate.getFullYear();
+    todayDate = mm + '/' + dd + '/' + yyyy;
+    // console.log(todayDate)
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -40,7 +40,7 @@ const OrderingPage = () => {
             productCount,
             OrderDateTime: todayDate,
         };
-        
+
         // console.log(orderingFoods);
 
         // You can make an API request here to update the item on the server.
@@ -77,53 +77,58 @@ const OrderingPage = () => {
     return (
 
 
-        <>
-{
-    authUser && 
-    <div className="w-full max-w-sm p-4 bg-red-300 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 className="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">{foodName}</h5>
+
+        <div className="flex w-full h-auto md:h-96 justify-center md:justify-between items-center  flex-col overflow-hidden  md:flex-row-reverse">
+        
+
+                    <div className="w-full md:w-1/2  p-4 font-medium bg-indigo-500 text-white border border-gray-200 rounded-lg shadow sm:p-8 ">
+                        <h5 className="mb-4 text-xl font-medium ">{foodName}</h5>
 
 
-        <ul role="list" className="space-y-5 my-7">
-            <li className="flex space-x-3 items-center">
+                        <ul role="list" className="space-y-5 my-7">
+                            <li className="flex space-x-3 items-center">
 
-                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Price: {totalPrice}</span>
-            </li>
-            <li className="flex space-x-3">
+                                <span className="text-base font-normal leading-tight ">Price: {totalPrice}</span>
+                            </li>
+                            <li className="flex space-x-3">
 
-                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Available Quantity: {quantityAvailable}</span>
-            </li>
-            <li className="flex space-x-3">
+                                <span className="text-base font-normal leading-tight ">Available Quantity: {quantityAvailable}</span>
+                            </li>
+                            <li className="flex space-x-3">
 
-                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">{authUser.displayName}</span>
-            </li>
-            <li className="flex space-x-3">
+                                <span className="text-base font-normal leading-tight ">{authUser.displayName}</span>
+                            </li>
+                            <li className="flex space-x-3">
 
-                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"><p className="text-sm">{authUser.email}</p> </span>
-            </li>
-
-
-            <li className="flex justify-between gap-4 items-center decoration-gray-500 ">
-                <div>
-                    <p className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Add Count: {productCount}</p>
-                </div>
-                <div className="flex gap-4">
-                    <button onClick={() => handleFoodPriceChange(productCount - 1)} className="btn to-primary">
-                        -
-                    </button>
-                    <button onClick={() => handleFoodPriceChange(productCount + 1)} className="btn to-primary">
-                        +
-                    </button>
-                </div>
-            </li>
-        </ul>
-        <button className="w-full btn btn-success" onClick={handleSubmit}>Order Confirm</button>
-    </div>
-}
+                                <span className="text-base font-normal leading-tight"><p className="text-sm">{authUser.email}</p> </span>
+                            </li>
 
 
+                            <li className="flex justify-between gap-4 items-center  ">
+                                <div>
+                                    <p className="text-base font-normal leading-tight ">Add Count: {productCount}</p>
+                                </div>
+                                <div className="flex gap-4">
+                                    <button onClick={() => handleFoodPriceChange(productCount - 1)} className="btn to-primary">
+                                        -
+                                    </button>
+                                    <button onClick={() => handleFoodPriceChange(productCount + 1)} className="btn to-primary">
+                                        +
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button className="w-full btn btn-success" onClick={handleSubmit}>Order Confirm</button>
+                    </div>
+                    <div className="w-full md:w-1/2 ">
+                        <img className="w-full h-full object-cover" src={foodImage} alt="" />
+                    </div>
+              
+        
 
-        </>
+
+        </div>
+
 
     );
 };
