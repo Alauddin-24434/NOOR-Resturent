@@ -12,7 +12,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AddedItems from "../Components/Profile/AddedItems";
 import AddItem from "../Components/Profile/AddItem";
 import OrderItem from "../Components/Profile/OrderItem";
-import Menu from "../Layouts/UserDetails/Menu";
+
 import Error404 from "../Pages/Error404";
 
 
@@ -58,12 +58,7 @@ const myRoute = createBrowserRouter([
             {
                 path: 'orderItems',
                 element: <OrderItem/>,
-                children:[
-                    {
-                        path:'orderItems',
-                        element:<Menu></Menu>
-                    }
-                ]
+               
             },
             {
                 path: 'singleDetails/:id',

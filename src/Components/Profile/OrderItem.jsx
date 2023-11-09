@@ -28,12 +28,12 @@ const OrderItem = () => {
 
     // console.log(greeting);
 
-    const url = ` http://localhost:5000/carts?UserEmail=${authUser?.email}`
+   
     useEffect(() => {
-        fetch(url)
+        fetch(` http://localhost:5000/carts?email=${authUser?.email}`)
             .then(res => res.json())
             .then(data => setCartUpdate(data))
-    }, [url]);
+    }, []);
 
     return (
         <div className="grid grid-cols-8">
