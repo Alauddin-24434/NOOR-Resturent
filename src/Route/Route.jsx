@@ -70,7 +70,7 @@ const myRoute = createBrowserRouter([
             {
                 path: '/orderingPage/:id',
                 element: <OrderingPage></OrderingPage>,
-                loader: ({ params }) => fetch(` http://localhost:5000/singleDetails/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/singleDetails/${params.id}`)
             },
             {
                 path: '/updateRoute/:id',

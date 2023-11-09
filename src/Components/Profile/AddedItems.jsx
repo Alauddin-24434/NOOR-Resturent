@@ -77,23 +77,25 @@ const AddedItems = () => {
 
             {dataFound ? (
                 <div>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                         {filteredData?.slice(startIndex, endIndex).map((foods) => (
-                            <div key={foods._id} className="card w-full rounded-none h-72 glass">
+                            <div key={foods._id} className="card w-full rounded-none h-96 glass">
                                 <figure>
                                     <img
-                                        className="w-full object-cover h-48"
+                                        className="w-full object-cover h-60"
                                         src={foods.foodImage}
                                         alt="car!"
                                     />
                                 </figure>
                                 <div className="card-body p-1">
-                                    <div className="flex justify-between bg-red-400">
-                                        <p className="card-title ">{foods.FoodName}</p>
-                                        <p>{foods.price}</p>
+                                    <div className=" ">
+                                        <p className="card-title ">{foods.foodName}</p>
+                                        <p>Price: {foods.price}</p>
                                     </div>
                                     <div>
-                                        <p>{foods.category}</p>
+                                        <p>Category :{foods.category}</p>
+                                        <p>{foods.shortDescription.slice(0,60)}</p>
+                                        <p>{foods.foodOrigin}</p>
                                     </div>
                                     <div className="flex justify-between">
                                         <p>Stock: {foods.quantityAvailable}</p>

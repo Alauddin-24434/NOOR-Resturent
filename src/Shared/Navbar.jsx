@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import {   BiLogOut } from "react-icons/bi";
+
 const Navbar = () => {
     const { authUser, userLogOut } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -45,7 +46,7 @@ const Navbar = () => {
                 <p className="text-sm md:text-2xl font-bold">N <span className="text-indigo-500">O</span> O <span className="text-indigo-500">R</span></p>
             </div>
             <div className="navbar-center hidden  lg:flex ">
-                <ul className="menu flex gap-4  menu-horizontal px-1">
+                <ul className="menu flex gap-4 items-center menu-horizontal px-1">
                     {
                         navItem
                     }
