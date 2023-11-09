@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './Slide.css'
 
 const Slideshow = () => {
     const data = [
@@ -48,7 +49,7 @@ const Slideshow = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3, // Default setting for lg screens
+        slidesToShow: 4, // Default setting for lg screens
         slidesToScroll: 1,
         responsive: [
             {
@@ -61,7 +62,7 @@ const Slideshow = () => {
             {
                 breakpoint: 1024, // Apply these settings for screens wider than 1024px (lg)
                 settings: {
-                    slidesToShow: 3, // Show 3 cards on larger screens
+                    slidesToShow: 4, // Show 3 cards on larger screens
                     slidesToScroll: 1,
                 },
             },
@@ -69,27 +70,31 @@ const Slideshow = () => {
     };
 
     return (
-        <div className="max-w-5xl p-8 mx-auto">
-            <div className="mt-2">
-                <Slider {...settings}>
-                    {
-                        data?.map((d) => (
-                            <div className="bg-white h-[400px] w-72 text-black rounded-xl" key={d.id}>
-                                <div className="h-56 rounded-t-xl bg-indigo-500 flex items-center justify-center">
-                                    <img src={d.image} alt="" className="w-44 h-44 rounded-full" />
-                                </div>
-                                <div className="flex flex-col items-center justify-center gap-4 p-4">
-                                    <p className="text-xl font-semibold">{d.name}</p>
-                                    <p>ID :{d.id}</p>
-                                    
-                                    <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">See More</button>
-                                </div>
-                            </div>
-                        ))
-                    }
-                </Slider>
-            </div>
-        </div>
+      <div className="">
+        <h1 className="text-4xl font-light">Our Food Cheffer</h1>
+          <div className="p-8">
+          
+          <div className="mt-2">
+              <Slider {...settings}>
+                  {
+                      data?.map((d) => (
+                          <div className="bg-white border h-[400px] w-72 text-black rounded-xl" key={d.id}>
+                              <div className="h-1/2 rounded-t-xl bg-indigo-500 flex items-center justify-center">
+                                  <img src={d.image} alt="" className="w-40 h-40 rounded-full" />
+                              </div>
+                              <div className="flex flex-col items-center justify-center gap-4 p-4">
+                                  <p className="text-xl font-semibold">{d.name}</p>
+                                  <p>ID :{d.id}</p>
+                                  
+                                  <button className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl">See More</button>
+                              </div>
+                          </div>
+                      ))
+                  }
+              </Slider>
+          </div>
+      </div>
+      </div>
     );
 };
 

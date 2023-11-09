@@ -38,10 +38,10 @@ const AllFoodItems = () => {
     const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     return (
-        <div>
-            <div className="my-6 flex">
+        <div className="">
+            <div className="my-6 min-w-96 mx-auto rounded-none">
                 <form>
-                    <div className="input-group">
+                    <div className="input-group ">
                         <input
                             type="text"
                             placeholder="Food Name Search here"

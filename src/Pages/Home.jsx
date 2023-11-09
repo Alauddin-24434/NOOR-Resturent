@@ -14,7 +14,7 @@ const Home = () => {
             {/* top food collection store import hare  */}
             <TopFood></TopFood>
            
-            <div className="bg-zinc-400">
+            <div className="">
             <Slideshow></Slideshow>
             <ContactUs></ContactUs>
             </div>
