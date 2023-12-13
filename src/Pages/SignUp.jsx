@@ -1,8 +1,9 @@
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
@@ -71,6 +72,11 @@ const SignUp = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Helmet>
+
+        <title>SignUp</title>
+
+      </Helmet>
       <div className="w-full max-w-md p-6 bg-white rounded-md shadow-md">
         <h2 className="text-3xl mb-4 text-center">Register</h2>
         <p className="mb-4 text-center">

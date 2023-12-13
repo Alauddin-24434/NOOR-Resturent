@@ -1,148 +1,118 @@
-import {  useContext, useEffect, useState } from "react";
-
-import { AiOutlineArrowRight, AiOutlineSearch } from "react-icons/ai";
-
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const AddedItems = () => {
-    const {authUser, }=useContext(AuthContext)
-    const [data, setTopFoodItem] = useState([])
-    const [searchQuery, setSearchQuery] = useState('');
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 9; // Number of items to display per page
-
-    // // Initialize a state variable to track whether data is found
-    const [dataFound, setDataFound] = useState(true);
-
-    // // Step 3: Filter the data based on the search query
-    const filteredData = data?.filter((food) =>
-        food.foodName.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    // // Handle search when the "Enter" key is pressed
-    const handleSearch = () => {
-        // Update the dataFound state based on whether there are matching results
-        setDataFound(filteredData.length > 0);
-    }
-
-    // // Calculate the indexes for the current page
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = currentPage * itemsPerPage;
-
-  
-
-    // // Calculate the total number of pages
-    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-
-    // // Create an array of page numbers
-    const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const { authUser } = useContext(AuthContext);
+  const [foodUpdateRemaining, setFoodUpdateRemaining] = useState([]);
 
    
-    
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch(`https://b8a11-server-side-alauddin-24434-9sbxqbkzk.vercel.app/addedUser?email=${authUser?.email}`);
+            
+            if (!response.ok) {
+                throw new Error('Failed to fetch data');
+            }
 
-    const url = ` http://localhost:5000/addedUser?email=${authUser?.email}`
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setTopFoodItem(data))
+            const data = await response.json();
+            setFoodUpdateRemaining(data);
+        } catch (error) {
+            console.error('Error fetching data:', error.message);
+            // You can add additional error handling here, like displaying an error message to the user.
+        }
+    };
 
+    fetchData();
+}, [authUser]);
 
-    }, [url])
-   
-    return (
+const handleDelete = (_id) => {
+    console.log("Deleting item with _id:", _id);
+
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Delete on the client side
+            fetch(`https://b8a11-server-side-alauddin-24434-9sbxqbkzk.vercel.app/deleteSingle/${_id}`, {
+                method: "DELETE",
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Server response:", data);
+                    if (data.deletedCount > 0) {
+                        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+                        const watchRemaining = foodUpdateRemaining?.filter((wat) => wat._id !== _id);
+                        setFoodUpdateRemaining(watchRemaining);
+                        // Update local storage after deletion
+                        localStorage.setItem("foodUpdateRemaining", JSON.stringify(watchRemaining));
+                    } else {
+                        Swal.fire("Error!", "Failed to delete the item.", "error");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error deleting item:", error);
+                    Swal.fire("Error!", "Failed to delete the item. Please try again later.", "error");
+                });
+        }
+    });
+};
+
+  return (
+    <div>
+      <Helmet>
+        <title>Added</title>
+      </Helmet>
+
+      {foodUpdateRemaining ? (
         <div>
-            <div className="my-6 flex">
-                <form>
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            placeholder="Food Name Search here"
-                            name="name"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)} // Step 4: Use onChange
-                            onKeyUp={(e) => {
-                                if (e.key === 'Enter') {
-                                    handleSearch();
-                                }
-                            }}
-                            className="input input-bordered w-96"
-                        />
-                        <span className="input-icon" onClick={handleSearch}>
-                            <AiOutlineSearch />
-                        </span>
-                    </div>
-                </form>
-            </div>
-
-            {dataFound ? (
-                <div>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                        {filteredData?.slice(startIndex, endIndex).map((foods) => (
-                            <div key={foods._id} className="card w-full rounded-none h-96 glass">
-                                <figure>
-                                    <img
-                                        className="w-full object-cover h-60"
-                                        src={foods.foodImage}
-                                        alt="car!"
-                                    />
-                                </figure>
-                                <div className="card-body p-1">
-                                    <div className=" ">
-                                        <p className="card-title ">{foods.foodName}</p>
-                                        <p>Price: {foods.price}</p>
-                                    </div>
-                                    <div>
-                                        <p>Category :{foods.category}</p>
-                                        <p>{foods.shortDescription.slice(0,60)}</p>
-                                        <p>{foods.foodOrigin}</p>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <p>Stock: {foods.quantityAvailable}</p>
-                                        <Link to={`/updateRoute/${foods._id}`}>
-                                            <button className="btn rounded-none">
-                                                Update <AiOutlineArrowRight />
-                                            </button>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    
-                    {/* Pagination Controls */}
-                    <div className="flex gap-8 justify-center my-4">
-                        <button
-                            onClick={() => setCurrentPage(currentPage - 1)}
-                            disabled={currentPage === 1}
-                          
-                        >
-                            Previous
-                        </button>
-                        {pageNumbers.map((pageNumber) => (
-                            <button
-                                key={pageNumber}
-                                onClick={() => setCurrentPage(pageNumber)}
-                                className={currentPage === pageNumber ? "text-red-400 font-semibold" : ""}
-                            >
-                                {pageNumber}
-                            </button>
-                        ))}
-                        <button
-                            onClick={() => setCurrentPage(currentPage + 1)}
-                            disabled={endIndex >= filteredData.length}
-                        >
-                            Next
-                        </button>
-                    </div>
+          <div className="grid my-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {foodUpdateRemaining?.map((foods) => (
+              <div key={foods._id} className="card w-full bg-slate-white md:w-72 rounded-md h-96 glass">
+                <div className="">
+                  <figure>
+                    <img
+                      className="w-full  rounded-md  object-cover h-40"
+                      src={foods.foodImage}
+                      alt="car!"
+                    />
+                  </figure>
                 </div>
-            ) : (
-                <p>Data not found.</p>
-            )}
+                <div className="card-body flex justify-center items-center p-1">
+                  <p className="card-title ">{foods.foodName}</p>
+                  <p>Price :{foods.price}</p>
+                  <div>
+                    <p>{foods.category}</p>
+                  </div>
+                  <p>Stock: {foods.quantityAvailable}</p>
+               <div className="flex flex-row gap-4">
+              
+                  <button onClick={() => handleDelete(foods._id)} className=" bg-red-400 px-4 py-1 rounded-md">
+                    Delete
+                  </button>
+                  <Link to={`/updateRoute/${foods._id}`}>
+                    <button className=" bg-green-100 px-4 py-1 rounded-md">Update</button>
+                  </Link>
+               </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-    );
+      ) : (
+        <p>Data not found.</p>
+      )}
+    </div>
+  );
 };
 
 export default AddedItems;
-
- 

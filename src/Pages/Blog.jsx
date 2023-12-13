@@ -1,8 +1,14 @@
+import { Helmet } from "react-helmet";
 
 
 const Blog = () => {
     return (
         <div className="bg-white p-4  border">
+            <Helmet>
+
+                <title>SignUp</title>
+
+            </Helmet>
             <div className="mb-6">
                 <h1 className="text-lg md:text-2xl">1. What is One way data binding?
                 </h1>

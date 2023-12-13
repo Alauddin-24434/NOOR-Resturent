@@ -1,0 +1,53 @@
+/* File: HealthAndWellnessMenu.css */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  
+  .food-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .food-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .food-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+  }
+  
+  .food-details {
+    padding: 20px;
+  }
+  
+  .food-details h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .health-info {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .health-info p {
+    margin: 5px 0;
+  }
+  

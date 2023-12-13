@@ -1,7 +1,8 @@
-import { AiOutlineArrowRight, AiOutlineSearch } from "react-icons/ai";
+import {  AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import useAllFoods from "../hooks/useAllFoods";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const AllFoodItems = () => {
     const { data, isLoading } = useAllFoods();
@@ -39,6 +40,11 @@ const AllFoodItems = () => {
 
     return (
         <div className="">
+            <Helmet>
+
+                <title>All Product</title>
+
+            </Helmet>
             <div className="my-6 min-w-96 mx-auto rounded-none">
                 <form>
                     <div className="input-group ">
@@ -64,43 +70,45 @@ const AllFoodItems = () => {
 
             {dataFound ? (
                 <div>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {filteredData?.slice(startIndex, endIndex).map((foods) => (
-                            <div key={foods._id} className="card w-full rounded-none h-72 glass">
-                                <figure>
+                            <div key={foods._id} className="card w-full bg-slate-white md:w-72 rounded-md h-96 glass">
+                               <div className="p-2">
+                               <figure>
                                     <img
-                                        className="w-full object-cover h-48"
+                                        className="w-full  rounded-md  object-cover h-40"
                                         src={foods.foodImage}
                                         alt="car!"
                                     />
                                 </figure>
-                                <div className="card-body p-1">
-                                    <div className="flex justify-between ">
+                               </div>
+                                <div className="card-body flex justify-center items-center p-1">
+                                    
                                         <p className="card-title ">{foods.foodName}</p>
-                                        <p>{foods.price}</p>
-                                    </div>
+                                        <p>Price :{foods.price}</p>
+                                    
                                     <div>
                                         <p>{foods.category}</p>
                                     </div>
-                                    <div className="flex justify-between">
+                                 
                                         <p>Stock: {foods.quantityAvailable}</p>
                                         <Link to={`/singleDetails/${foods._id}`}>
-                                            <button className="btn rounded-none">
-                                                Details <AiOutlineArrowRight />
+                                            <button className=" bg-orange-400 px-4 py-1 rounded-md">
+                                                Details 
                                             </button>
                                         </Link>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         ))}
                     </div>
-                    
+
                     {/* Pagination Controls */}
                     <div className="flex gap-8 justify-center my-4">
                         <button
                             onClick={() => setCurrentPage(currentPage - 1)}
                             disabled={currentPage === 1}
-                          
+
                         >
                             Previous
                         </button>

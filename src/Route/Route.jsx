@@ -5,7 +5,7 @@ import AllFoodItems from "../Pages/AllFoodItems";
 import Blog from "../Pages/Blog";
 import SingleFoodDetails from "../Shared/SingleFoodDetails";
 import OrderingPage from "../Pages/OrderingPage";
-import UserProfile from "../Pages/UserProfile";
+
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
@@ -36,10 +36,7 @@ const myRoute = createBrowserRouter([
                 path: 'blog',
                 element: <Blog></Blog>
             },
-            {
-                path: 'userProfile',
-                element: <UserProfile></UserProfile>
-            },
+        
             {
                 path: 'login',
                 element: <Login></Login>
@@ -49,7 +46,7 @@ const myRoute = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path: '/addedItems',
+                path: 'addedItems',
                 element: <AddedItems></AddedItems>
             },
             {
@@ -62,20 +59,20 @@ const myRoute = createBrowserRouter([
                
             },
             {
-                path: 'singleDetails/:id',
+                path: '/singleDetails/:id',
                 element: <PrivateRoute><SingleFoodDetails></SingleFoodDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a11-server-side-alauddin-24434-7g3ompu7j.vercel.app/singleDetails/${params.id}`)
 
             },
             {
                 path: '/orderingPage/:id',
                 element: <OrderingPage></OrderingPage>,
-                loader: ({ params }) => fetch(`http://localhost:5000/singleDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://b8a11-server-side-alauddin-24434-7g3ompu7j.vercel.app/singleDetails/${params.id}`)
             },
             {
                 path: '/updateRoute/:id',
                 element:<UpdateRoute></UpdateRoute>,
-                loader:({params})=> fetch(`http://localhost:5000/userUpdate/${params.id}`)
+                loader:({params})=> fetch(`https://b8a11-server-side-alauddin-24434-9sbxqbkzk.vercel.app/userUpdate/${params.id}`)
             }
 
         ]

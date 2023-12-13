@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const AddItem = () => {
     const { authUser } = useContext(AuthContext)
@@ -31,34 +32,45 @@ const AddItem = () => {
            quantityAvailable:Number(quantityAvailable)
         };
         // console.log(addFoodUser)
-
-        fetch('   http://localhost:5000/users', {
+        fetch('https://b8a11-server-side-alauddin-24434-9sbxqbkzk.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(addFoodUser)
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: "Product add successfully!",
-                        icon: 'success',
-
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-
-                    })
-                }
-            })
-
+        .then(res => res.json())
+        .then(data => {
+            console.log('Server Response:', data); // Log the server response
+        
+            if (data.insertedId) {
+                Swal.fire({
+                    title: 'Success!',
+                    text: "Product added successfully!",
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                })
+            }
+        })
+        .catch(error => {
+            console.error('Error adding product:', error);
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to add product. Please try again later.',
+                icon: 'error',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+            });
+        });
     }
     return (
 
 
         <div className="border ">
+             <Helmet>
+                <title>Add</title>
+            </Helmet>
             <form onSubmit={handleSubmit}>
                 <div className="grid gap-6 items-center  mb-6 grid-cols-4">
                     <div>

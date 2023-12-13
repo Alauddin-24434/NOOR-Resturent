@@ -5,10 +5,13 @@ import { MdOutlinePayments } from 'react-icons/md';
 import { LuPhoneCall } from 'react-icons/lu';
 import { RiMenuAddFill } from 'react-icons/ri';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 
 const OrderItem = () => {
     const { authUser } = useContext(AuthContext)
     const [cartUpadete, setCartUpdate] = useState([])
+
     // console.log(cartUpadete)
     // greeting condition user
     const now = new Date();
@@ -30,13 +33,29 @@ const OrderItem = () => {
 
    
     useEffect(() => {
-        fetch(` http://localhost:5000/carts?email=${authUser?.email}`)
-            .then(res => res.json())
-            .then(data => setCartUpdate(data))
-    }, []);
-
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`https://b8a11-server-side-alauddin-24434-9sbxqbkzk.vercel.app/carts?email=${authUser?.email}`);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+    
+                const data = await response.json();
+                setCartUpdate(data);
+            } catch (error) {
+                console.error('Error fetching data:', error.message);
+                // You can add additional error handling here, like displaying an error message to the user.
+            }
+        };
+    
+        fetchData();
+    }, [authUser]);
     return (
         <div className="grid grid-cols-8">
+             <Helmet>
+                <title>OrderItem</title>
+            </Helmet>
             <div className="col-span-2 ">
                 <ul role="list" className="space-y-5 p-4 my-7">
 

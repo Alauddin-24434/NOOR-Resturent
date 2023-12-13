@@ -1,0 +1,8 @@
+.login-box {
+    transition: border-radius 0.5s, background-color 0.5s;
+}
+
+.login-box:hover {
+    border-radius: 20px;
+    background-color: rgb(255, 0, 0);
+}

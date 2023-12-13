@@ -71,7 +71,7 @@ const Slideshow = () => {
 
     return (
         <div className="">
-            <h1 className="text-4xl font-light">
+            <h1 className="text-5xl font-semi-bold mb-8  text-orange-600">
                 About
                 Our Chefs </h1>
             <div className="p-8">
